@@ -1,0 +1,80 @@
+/*===========================================================================================================*/
+/*                                        Стилизация обычных блоков                                          */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+._10_block_button_cl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+._10_day_w_cl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._10_day_w_cl > table {
+    border-collapse: collapse;
+}
+
+#_10_table_id > tr > th, #_10_table_id > tr > td {
+    border: solid 2px blue;
+}
+
+#_10_table_id > tr > th {width: 120px;}
+
+#_10_table_id > tr > td {text-align: center;}
+
+#_10_lon_id, #_10_lat_id {
+    width: 50px;
+}
+
+._10_parametet_cl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+._10_parametet_cl > div {
+    display: flex;
+    flex-direction: row;
+}
+
+._10_parametet_cl > div > div {
+    width: 80px;
+}
+
+#_10_button_id {
+    width: 200px;
+    height: 50px;
+    font-weight: bolder;
+}
+
+/*===========================================================================================================*/
+/*                                    Стилизация функциональных блоков                                       */
+/*VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV*/
+
+/* Модальное окно загрузки */
+#_10_modal_table {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.2;
+    border: solid 5px blue;
+    width: 100%;
+    height: 100%;
+}
+
+#_10_modal_table > img {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
