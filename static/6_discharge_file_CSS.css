@@ -1,0 +1,36 @@
+._6_discharge_file {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+._6_head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 8px;
+}
+
+._6_table > table {
+    border-collapse: collapse;
+}
+
+._6_table > table > thead > tr > th, ._6_table > table > thead > tr > td {
+    border: solid 1px blue;
+}
+
+._6_table > table > thead > tr > th:nth-child(1) {width: 20px;}
+._6_table > table > thead > tr > td:nth-child(1) {
+    text-align: center;
+}
+._6_table > table > thead > tr > th:nth-child(2) {width: 300px;}
+._6_table > table > thead > tr > th:nth-child(3) {width: 110px;}
+._6_table > table > thead > tr > th:nth-child(4) {width: 110px;}
+._6_table > table > thead > tr > th:nth-child(5) {width: 120px;}
+._6_table > table > thead > tr > th:nth-child(6) {width: 80px;}
+._6_table > table > thead > tr > td:nth-child(6) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
