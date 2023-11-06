@@ -1,0 +1,37 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+<div>
+    <div class="question_start_class">
+        <button id='button_start_id'>Начать тест</button>
+    </div>
+    <div class="question_class">
+        <div id="question_div_generator">
+
+        </div>
+        <div>
+            <h3 id="Question_h"></h3>
+            <span class="question" id="Question">
+
+            </span>
+        </div>
+        <div class="input_radio_class">
+            <label><input name="group_1" type="radio" id="Q_1_Checked"><span id="Q_1"></span></label><br>
+            <label><input name="group_1" type="radio" id="Q_2_Checked"><span id="Q_2"></span></label><br>
+            <label><input name="group_1" type="radio" id="Q_3_Checked"><span id="Q_3"></span></label><br>
+            <label><input name="group_1" type="radio" id="Q_4_Checked"><span id="Q_4"></span></label><br>
+        </div>
+        <div>
+            <button id='button_GO_id'>Далее</button>
+        </div>
+    </div>
+    <div class="question_stop_class">
+        <h3>Итог опроса/теста</h3>
+        <div><span>Правильных ответов: </span><span id="question_stop"></span></div>
+        <button id='button_stop_id'>Завершить опрос/тест</button>
+    </div>
+    <script type="module" src="/static/2_Questionnaire_JS.js"></script>
+    <script type="module" src="/static/2_Questionnaire_questions_JS.js"></script>
+</div>
+
+{% endblock %}

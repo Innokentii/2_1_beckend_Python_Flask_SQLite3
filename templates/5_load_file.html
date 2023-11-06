@@ -1,0 +1,39 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+
+<div>
+    <h2>Сюда можно загружать абсалютно любой файл</h2>
+    <div class="_5_block_load">
+        <div class="_5_head">
+            <form method="post" enctype="multipart/form-data" id="_5_form">
+                <input type="file" name="info_url_py" onchange="file_load(this)" accept="" id="_5_input">
+                <button type="submit" id="_5_button_id">Загрузить в базу данных</button>
+            </form>
+            <div class="_5_switches">
+                <b>Выбор форматов загрузки</b>
+                <label><input id="_5_rad_1" name="radio_num_1" type="radio">Толко ".jpg";</label>
+                <label><input id="_5_rad_2" name="radio_num_1" type="radio">Толко ".png";</label>
+                <label><input id="_5_rad_3" name="radio_num_1" type="radio">Толко ".xlsx";</label>
+                <label><input id="_5_rad_4" name="radio_num_1" type="radio">Толко ".docx";</label>
+                <label><input id="_5_rad_5" name="radio_num_1" type="radio">Толко ".mp3";</label>
+                <label><input id="_5_rad_6" name="radio_num_1" type="radio">Толко ".mp4";</label>
+                <label><input id="_5_rad_7" name="radio_num_1" type="radio" checked>Любой тип файлов</label>
+            </div>
+        </div>
+        <div class="_5_body">
+            <img src="" alt="нет фото" id="_5_img_">
+        </div>
+    </div>
+    <div>
+        <b>Загрузка файлов происходит в базу данных "SQLite3" и в папку "static/upload"</b><br>
+        <span>При выборе форматов изображений - изображение выводится на блок справа</span>
+    </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+<script src="/static/5_load_file_JS.js"></script>
+
+{% endblock %}

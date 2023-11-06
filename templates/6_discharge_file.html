@@ -1,0 +1,38 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+
+<div class="_6_discharge_file">
+    <div class="_6_head">
+        <form method="" id="_6_form">
+            <input style="display: none;" type="text" name="infopy" id="_6_input_id">
+        </form>
+        <button value="Button_1_val">Просмотр файлов в SQLite3</button>
+        <button value="Button_2_val">Скачать все файлы</button>
+        <b>Все файлы сохраняются в папке "Windows/Downloads"</b>
+    </div>
+    <div class="_6_table">
+        <div id="table_row_num" style="display: none;">{% for inf in info_files[0] %}{{ inf }}{% endfor %}</div>
+        <div id="table_row_name" style="display: none;">{% for inf in info_files[1] %}{{ inf }}{% endfor %}</div>
+        <div id="table_row_size" style="display: none;">{% for inf in info_files[2] %}{{ inf }}{% endfor %}</div>
+        <div id="table_row_date" style="display: none;">{% for inf in info_files[3] %}{{ inf }}{% endfor %}</div>
+        <div id="table_row_time" style="display: none;">{% for inf in info_files[4] %}{{ inf }}{% endfor %}</div>
+        <table>
+            <thead id="_6_thead_id">
+                <tr>
+                    <th>№</th>
+                    <th>Имя файла</th>
+                    <th>Размер файла (в байтах)</th>
+                    <th>Дата загрузки</th>
+                    <th>Время загрузки</th>
+                    <th>скачать</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script src="/static/6_discharge_file_JS.js"></script>
+
+
+{% endblock %}

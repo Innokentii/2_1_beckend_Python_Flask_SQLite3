@@ -1,0 +1,52 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/8_audio_video_CSS.css">
+<div class="_8_audio">
+    <div class="_8_audio_heder">
+        <img src="/static/8_icon_audio.png" alt="нет фото" id="_8_av_img">
+        <b id="_8_name_audio">Выберите музыку из списка</b>
+        <div class="_8_controls_audio">
+            <img src="/static/8_next.png" alt="нет фото" id="_8_next_left_id">
+            <div>
+                <img src="/static/8_play.png" alt="нет фото" id="_8_play_id">
+                <img src="/static/8_pause.png" alt="нет фото" id="_8_pause_id">
+            </div>
+            <img src="/static/8_next.png" alt="нет фото" id="_8_next_right_id">
+        </div>
+        <div id="_8_load_audio_">
+            <div id="_8_load_blue_id"></div>
+            <div id="_8_load_red_id"></div>
+        </div>
+        <div class="_8_sound">
+            <div>
+                <img src="/static/8_sound.png" alt="нет фото" id="_8_sound_id">
+                <img src="/static/8_not_sound.png" alt="нет фото" id="_8_not_sound_id">
+            </div>
+            <div id="load_sound_parent_id">
+                <div id="load_sound_id"></div>
+            </div>
+        </div>
+        <audio id="_8_hidden_audio" style="display: none;"></audio>
+    </div>
+    <div class="_8_audio_body">
+        <table>
+            <thead id="_8_table_create">
+                <tr>
+                    <th>№</th>
+                    <th>Наименование</th>
+                    <th>Альбом</th>
+                    <th>Группа</th>
+                    <th>Жанр</th>
+                    <th>Контроллер</th>
+                </tr>
+
+            </thead>
+        </table>
+    </div>
+</div>
+<div id="_8_modal_table"><img src="/static/10_load_gif.gif" alt="Нет GIF"></div>
+<script src="/static/8_audio_video_JS.js"></script>
+
+{% endblock %}

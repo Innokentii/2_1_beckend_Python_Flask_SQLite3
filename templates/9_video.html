@@ -1,0 +1,55 @@
+{% extends 'beckend.html' %}
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!--              страница HTML для работы с вомпроизведение видео файлов типа "mp4"                -->
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+{% block main %}
+
+<link rel="stylesheet" href="/static/9_video_CSS.css"><!--Окно видео плеера-->
+
+<div class="_9_body_cl">
+    <!--Блок просмотра и управления видео-->
+    <div id="_9_screen_id">
+        <!--Окно видео плеера-->
+        <video id="_9_work_video_id"src="" width="600" loop></video>
+        <!--Контроллер видео плееера-->
+        <div id="_9_controller_video_id">
+            <div>
+                <!--Кнопка в виде IMG старта и остановки видео-->
+                <img src="/static/9_start_video.png" alt="нет фото" id="_9_start_video_id">
+                <img src="/static/9_stop_video.png" alt="нет фото" id="_9_stop_video_id">
+            </div>
+            <div id="_9_load_video_id">
+                <!--Индекатор текущего положения просмотреннего видео-->
+                <div id="_9_load_video_work_id"></div>
+            </div>
+            <div>
+                <!--Кнопка в виде IMG увеличения и уменьшения видео-->
+                <img src="/static/9_big_video.jpg" alt="" id="_9_big_video_id">
+                <img src="/static/9_low_video.jpg" alt="" id="_9_low_video_id">
+            </div>
+        </div>
+    </div>
+    <!--Блок выбора видео для просмотра-->
+    <!--(Здесь генерируется строки с видео с базы данных)-->
+    <div>
+        <b>Видео скроллинг</b>
+        <div id="_9_scroll_video_id">
+            <template id="_9_templare_gen_video_id">
+                <div class="_9_load_file_cl">
+                    <div>
+                        <video src=""  width="150"></video>
+                    </div>
+                    <div>
+                        <b>Наименование видео: </b>
+                        <span>123</span>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>
+<div id="_9_modal_table"><img src="/static/10_load_gif.gif" alt="Нет GIF"></div>
+
+<script src="/static/9_video_JS.js"></script>
+
+{% endblock %}

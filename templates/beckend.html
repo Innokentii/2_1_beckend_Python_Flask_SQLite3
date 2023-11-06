@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beckend</title>
+    <link rel="stylesheet" href="static/beckend_CSS.css">
+    <link rel="stylesheet" href="static/2_Questionnaire_CSS.css">
+    <link rel="stylesheet" href="static/4_registration_CSS.css">
+    <link rel="stylesheet" href="static/5_load_file_CSS.css">
+    <link rel="stylesheet" href="static/6_discharge_file_CSS.css">
+</head>
+<body>
+    
+    <div class="beckend_style">
+        <div class="beckend_head_class">
+            <div><div>ДЕМОНСТРАЦИЯ BECKEND НАВЫКОВ</div></div>
+            <div><div>на фреймворке Flask</div><div></div></div>
+            <div><div>на базе данных SQLite3</div><div></div></div>
+            <div><div>на серверном коде Python</div><div></div></div>
+        </div>
+        <hr size="5" color="blue">
+        <div>
+            <footer class="footer" id="footer_id"></footer>
+            <div class="new_body" id="block_main">
+                {% block main %}{% endblock %}
+            </div>
+        </div>
+    </div>
+<script src="static/beckend_JS.js"></script>
+</body>
+</html>

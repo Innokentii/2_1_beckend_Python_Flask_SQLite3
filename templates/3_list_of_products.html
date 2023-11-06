@@ -1,0 +1,46 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+
+<script src="/static/table2excel.js"></script>
+<div class="_3_list_of_products" id="data_pdf">
+    <h3>Таблица товаров на складе</h3>
+    <table id="data">
+        <thead id="list_of_products_thead_id">
+            <tr>
+                <th>№</th>
+                <th>Наименование</th>
+                <th>Артикул</th>
+                <th>Каталожный номер</th>
+                <th>Количество</th>
+                <th>Стоимость (в долларах USD)</th>
+                <th>Общая сумма (в долларах USD)</th>
+                <th>Стоимость (в Тенге KZT)</th>
+                <th>Общая сумма (в Тенге KZT)</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="_3_footer">
+    <form method="post">
+        <button onclick="data_transmission_python()" type="submit">Сохранить</button>
+        <div style="display: none;">
+            <div id="_3_exc_f_id">{% for row in exc_f %}{{ row }}{% endfor %}</div>
+            <input id="_3_exc_py_id" type="text" name="pwd">
+        </div>
+    </form>
+    <button onclick="export_excell_file()">Экспортировать в excell</button>
+    <button onclick="export_PDF_file()">Экспортировать в PDF</button>
+</div>
+<div>
+    <p>Данную таблицу можно редактировать на сайте и сохранить.</p>
+    <p>Сохранение хранится в 'static/3_Excell.xlsx'</p>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
+<script src="/static/3_list_of_products_JS.js"></script>
+
+{% endblock %}

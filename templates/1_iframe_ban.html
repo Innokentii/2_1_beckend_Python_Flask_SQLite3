@@ -1,0 +1,28 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+
+<!--Запрет использования iframe в сайте-->
+<div class="_1_iframe_ban">
+    <script type="text/javascript">    
+        if (window.parent.frames.length > 0) {
+          window.stop();
+          let block_main = document.getElementById('block_main');
+          let new_div = document.createElement('div');
+          new_div.innerText = "Извините но страница не доступна";
+          block_main.append(new_div);
+        };
+    </script>
+    <div>
+        <span>Эту страницу сайта</span>
+        <span>невозможно отобразить</span>
+        <span>на другом сайте с</span>
+        <span>помощью iframe</span>
+        <p></p>
+        <span>Нажмите ссылку в меню слева</span>
+        <span>"1.2_Проверка запрета использования iframe в сайте"</span>
+    </div>
+    <img src="static/1_cat.jpg" alt="not_image">
+</div>
+
+{% endblock %}

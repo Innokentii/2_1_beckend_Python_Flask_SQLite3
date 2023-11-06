@@ -1,0 +1,56 @@
+{% extends 'beckend.html' %}
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!--               страница HTML для работы с вызовами API данных о прогнозе погоды                 -->
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+{% block main %}
+
+<link rel="stylesheet" href="/static/10_weather_forecast_CSS.css">
+<div>
+    <div class="_10_block_button_cl">
+        <!--Кнопка вывода погодных данных по координатам-->
+        <button id="_10_button_id">Прогноз погоды на 8 дней</button>
+
+        <!--Вывод погодных данных по городу-->
+        <div class="_10_parametet_cl">
+            <b>Запроса погоды по городу:</b>
+            <select id="_10_select_city_id">
+                <option></option>
+                <option>Алматы</option>
+                <option>Вашингтон</option>
+                <option>Якутск</option>
+                <option>Сеул</option>
+            </select>
+        </div>
+
+        <!--Вывод погодных данных по координатам-->
+        <div class="_10_parametet_cl">
+            <b>Запроса погоды по координатам:</b>
+            <div>
+                <div><b>Долгота: </b></div><input type="text" id="_10_lon_id"><span> - не превышает 180 град;</span>
+            </div>
+            <div>
+                <div><b>Ширина: </b></div><input type="text" id="_10_lat_id"><span> - не превышает 90 град;</span>
+            </div>
+        </div>
+    </div>
+    <div class="_10_day_w_cl">
+        <table>
+            <thead id="_10_table_id">
+                <tr>
+                    <th>Дата</th>
+                    <th>Время дня</th>
+                    <th>Температура</th>
+                    <th>Условие</th>
+                    <th>Влажность</th>
+                    <th>Скорость ветра (м/с)</th>
+                    <th>Направление ветра</th>
+                </tr>
+            </thead>
+        </table>
+        <div id="_10_modal_table"><img src="/static/10_load_gif.gif" alt="Нет GIF"></div>
+    </div>
+</div>
+<script src="/static/10_weather_forecast_JS.js"></script>
+
+{% endblock %}

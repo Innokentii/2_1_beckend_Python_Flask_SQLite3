@@ -1,0 +1,68 @@
+{% extends "beckend.html" %}
+
+{% block main %}
+<form id="reg_id" method="">
+    <div class="registration_body">
+        <div id="not_go_id">
+            <h4>Регистрация аккаунта</h4>
+            <span>Введите ФИО:</span>
+            <input type="text" name="LFP" id="_4_input_1_id">
+            <span>Введите номер телефона:</span>
+            <input type="text" name="phone" id="_4_input_2_id">
+            <span>Введите эл.почту:</span>
+            <input type="text" name="mail" id="_4_input_2_2_id">
+            <span>Придумайте логин аккаунта:</span>
+            <input type="text" name="login" id="_4_input_3_id">
+            <span>Придумайте пароль:</span>
+            <div id="open_password_1">
+                <input type="password" name="password_enter" id="_4_input_4_id">
+                <div>&#x1F441;</div>
+            </div>
+            <span>Повторите пороль:</span>
+            <div id="open_password_2">
+                <input type="password" id="_4_input_5_id">
+                <div>&#x1F441;</div>
+            </div>
+            <button id="_4_button_1" type="" disabled>Регистрация</button>
+            <span id="_4_danger_span">{% for text_py in reg_val[0] %}{{ text_py }}{% endfor %}</span>
+        </div>
+        <div id="not_go_id_2">
+            <h4>Вход в аккаунт</h4>
+            <span>Введите логин аккаунта:</span>
+            <input type="text" id="login_open" name="login_open_post">
+            <span>Введите пароль:</span>
+            <div id="open_password_3">
+                <input type="password" id="login_open_password" name="password_open_post">
+                <div>&#x1F441;</div>
+            </div>
+            <button id="_4_button_2" type="submit">Вход</button>
+            <div style="display: none;" id="password_open">{% for password in reg_val[2] %}{{ password }}{% endfor %}
+            </div>
+            <span id="_4_danger_open">"такого логина не существует либо не верный пароль"</span>
+            <div id="_4_open_user">
+                <b>Добрый день</b>
+                <span></span>
+                <b>Ваш номер телефона:</b>
+                <span></span>
+                <b>Ваша эл.почта:</b>
+                <span></span>
+            </div>
+        </div>
+        <div id="_4_table_head">
+            <h4>База данных SQLite3</h4>
+            <table>
+                <thead id="_4_table">
+                    <tr>
+                        <th>Логин</th>
+                        <th>ФИО</th>
+                    </tr>
+                </thead>
+            </table>
+            <span style="display: none;" id="span_python_info">{% for base_py in reg_val[1] %}{{ base_py }}{% endfor
+                %}</span>
+        </div>
+    </div>
+</form>
+<script src="/static/4_registration_JS.js"></script>
+
+{% endblock %}
